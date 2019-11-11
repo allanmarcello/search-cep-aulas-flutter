@@ -6,8 +6,8 @@ class ViaCepService {
     final response = await http.get('https://viacep.com.br/ws/$cep/json/');
     if (response.statusCode == 200) {
       return ResultCep.fromJson(response.body);
-    } else {
-      throw Exception('Requisição inválida!');
+    } else{
+      return ResultCep.fromJson('{ "cep": "Verifique o CEP digitado!",  "logradouro": "Verifique o CEP digitado!",  "complemento": "Verifique o CEP digitado!",  "bairro": "Verifique o CEP digitado!",  "localidade": "Verifique o CEP digitado!",  "uf": "Verifique o CEP digitado!",  "unidade": "Verifique o CEP digitado!",  "ibge": "Verifique o CEP digitado!",  "gia": "Verifique o CEP digitado!" }');
     }
   }
 }

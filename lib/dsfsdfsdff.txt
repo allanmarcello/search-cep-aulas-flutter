@@ -1,0 +1,6 @@
+void temas(){
+     ThemeData(brightness: Brightness.light, primarySwatch: Colors.amber),
+    darkTheme: ThemeData(
+      brightness: Brightness.dark,
+    ),
+}
